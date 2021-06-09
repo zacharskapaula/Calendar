@@ -24,62 +24,56 @@ namespace Calendar
 
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dayControl1 = new Calendar.DayControl();
-            this.dayControl2 = new Calendar.DayControl();
-            this.dayControl3 = new Calendar.DayControl();
-            this.dayControl4 = new Calendar.DayControl();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarForm));
+            this.caledarNet = new System.Windows.Forms.TableLayoutPanel();
             this.dayControl5 = new Calendar.DayControl();
+            this.dayControl3 = new Calendar.DayControl();
+            this.dayControl2 = new Calendar.DayControl();
+            this.dayControl4 = new Calendar.DayControl();
             this.dayControl6 = new Calendar.DayControl();
             this.dayControl7 = new Calendar.DayControl();
             this.dayControl8 = new Calendar.DayControl();
             this.dayControl9 = new Calendar.DayControl();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.dayControl1 = new Calendar.DayControl();
+            this.caledarNet.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // caledarNet
             // 
-            this.tableLayoutPanel1.ColumnCount = 7;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.40712F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.59288F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 145F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
-            this.tableLayoutPanel1.Controls.Add(this.dayControl5, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dayControl3, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dayControl1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dayControl2, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dayControl4, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dayControl6, 6, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dayControl7, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.dayControl8, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.dayControl9, 2, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(59, 45);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.75439F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.24561F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 117F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 104F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 86F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(976, 558);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.caledarNet.ColumnCount = 7;
+            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.40712F));
+            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.59288F));
+            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
+            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
+            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 145F));
+            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
+            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
+            this.caledarNet.Controls.Add(this.dayControl5, 4, 0);
+            this.caledarNet.Controls.Add(this.dayControl3, 2, 0);
+            this.caledarNet.Controls.Add(this.dayControl2, 2, 0);
+            this.caledarNet.Controls.Add(this.dayControl4, 4, 0);
+            this.caledarNet.Controls.Add(this.dayControl6, 6, 0);
+            this.caledarNet.Controls.Add(this.dayControl7, 0, 1);
+            this.caledarNet.Controls.Add(this.dayControl8, 1, 1);
+            this.caledarNet.Controls.Add(this.dayControl9, 2, 1);
+            this.caledarNet.Controls.Add(this.dayControl1, 1, 0);
+            this.caledarNet.Location = new System.Drawing.Point(59, 45);
+            this.caledarNet.Name = "caledarNet";
+            this.caledarNet.RowCount = 5;
+            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.75439F));
+            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.24561F));
+            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 117F));
+            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 104F));
+            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 86F));
+            this.caledarNet.Size = new System.Drawing.Size(976, 558);
+            this.caledarNet.TabIndex = 0;
             // 
-            // dayControl1
+            // dayControl5
             // 
-            this.dayControl1.Location = new System.Drawing.Point(135, 3);
-            this.dayControl1.Name = "dayControl1";
-            this.dayControl1.Size = new System.Drawing.Size(120, 109);
-            this.dayControl1.TabIndex = 0;
-            // 
-            // dayControl2
-            // 
-            this.dayControl2.Location = new System.Drawing.Point(271, 3);
-            this.dayControl2.Name = "dayControl2";
-            this.dayControl2.Size = new System.Drawing.Size(120, 109);
-            this.dayControl2.TabIndex = 1;
+            this.dayControl5.Location = new System.Drawing.Point(560, 3);
+            this.dayControl5.Name = "dayControl5";
+            this.dayControl5.Size = new System.Drawing.Size(120, 109);
+            this.dayControl5.TabIndex = 4;
             // 
             // dayControl3
             // 
@@ -88,19 +82,19 @@ namespace Calendar
             this.dayControl3.Size = new System.Drawing.Size(120, 109);
             this.dayControl3.TabIndex = 2;
             // 
+            // dayControl2
+            // 
+            this.dayControl2.Location = new System.Drawing.Point(271, 3);
+            this.dayControl2.Name = "dayControl2";
+            this.dayControl2.Size = new System.Drawing.Size(120, 109);
+            this.dayControl2.TabIndex = 1;
+            // 
             // dayControl4
             // 
-            this.dayControl4.Location = new System.Drawing.Point(560, 3);
+            this.dayControl4.Location = new System.Drawing.Point(705, 3);
             this.dayControl4.Name = "dayControl4";
             this.dayControl4.Size = new System.Drawing.Size(120, 109);
             this.dayControl4.TabIndex = 3;
-            // 
-            // dayControl5
-            // 
-            this.dayControl5.Location = new System.Drawing.Point(705, 3);
-            this.dayControl5.Name = "dayControl5";
-            this.dayControl5.Size = new System.Drawing.Size(120, 109);
-            this.dayControl5.TabIndex = 4;
             // 
             // dayControl6
             // 
@@ -130,12 +124,21 @@ namespace Calendar
             this.dayControl9.Size = new System.Drawing.Size(120, 109);
             this.dayControl9.TabIndex = 8;
             // 
+            // dayControl1
+            // 
+            this.dayControl1.Location = new System.Drawing.Point(135, 3);
+            this.dayControl1.Name = "dayControl1";
+            this.dayControl1.Size = new System.Drawing.Size(120, 109);
+            this.dayControl1.TabIndex = 0;
+            // 
             // CalendarForm
             // 
-            this.ClientSize = new System.Drawing.Size(1105, 615);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(1087, 675);
+            this.Controls.Add(this.caledarNet);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CalendarForm";
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.Text = "Calendar";
+            this.caledarNet.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

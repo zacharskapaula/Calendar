@@ -30,10 +30,9 @@ namespace Calendar
 
 
 
-        
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel caledarNet;
         private DayControl dayControl5;
         private DayControl dayControl3;
         private DayControl dayControl1;
