@@ -35,6 +35,10 @@ namespace Calendar
             this.dayControl8 = new Calendar.DayControl();
             this.dayControl9 = new Calendar.DayControl();
             this.dayControl1 = new Calendar.DayControl();
+            this.dayControl10 = new Calendar.DayControl();
+            this.dayControl11 = new Calendar.DayControl();
+            this.dayControl12 = new Calendar.DayControl();
+            this.dayControl13 = new Calendar.DayControl();
             this.caledarNet.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +61,10 @@ namespace Calendar
             this.caledarNet.Controls.Add(this.dayControl8, 1, 1);
             this.caledarNet.Controls.Add(this.dayControl9, 2, 1);
             this.caledarNet.Controls.Add(this.dayControl1, 1, 0);
+            this.caledarNet.Controls.Add(this.dayControl10, 3, 1);
+            this.caledarNet.Controls.Add(this.dayControl11, 4, 1);
+            this.caledarNet.Controls.Add(this.dayControl12, 5, 1);
+            this.caledarNet.Controls.Add(this.dayControl13, 6, 1);
             this.caledarNet.Location = new System.Drawing.Point(59, 45);
             this.caledarNet.Name = "caledarNet";
             this.caledarNet.RowCount = 5;
@@ -130,6 +138,34 @@ namespace Calendar
             this.dayControl1.Name = "dayControl1";
             this.dayControl1.Size = new System.Drawing.Size(120, 109);
             this.dayControl1.TabIndex = 0;
+            // 
+            // dayControl10
+            // 
+            this.dayControl10.Location = new System.Drawing.Point(414, 132);
+            this.dayControl10.Name = "dayControl10";
+            this.dayControl10.Size = new System.Drawing.Size(120, 109);
+            this.dayControl10.TabIndex = 9;
+            // 
+            // dayControl11
+            // 
+            this.dayControl11.Location = new System.Drawing.Point(560, 132);
+            this.dayControl11.Name = "dayControl11";
+            this.dayControl11.Size = new System.Drawing.Size(120, 109);
+            this.dayControl11.TabIndex = 10;
+            // 
+            // dayControl12
+            // 
+            this.dayControl12.Location = new System.Drawing.Point(705, 132);
+            this.dayControl12.Name = "dayControl12";
+            this.dayControl12.Size = new System.Drawing.Size(120, 109);
+            this.dayControl12.TabIndex = 11;
+            // 
+            // dayControl13
+            // 
+            this.dayControl13.Location = new System.Drawing.Point(835, 132);
+            this.dayControl13.Name = "dayControl13";
+            this.dayControl13.Size = new System.Drawing.Size(120, 109);
+            this.dayControl13.TabIndex = 12;
             // 
             // CalendarForm
             // 

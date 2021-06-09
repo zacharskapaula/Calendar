@@ -42,6 +42,10 @@ namespace Calendar
         private DayControl dayControl7;
         private DayControl dayControl8;
         private DayControl dayControl9;
+        private DayControl dayControl10;
+        private DayControl dayControl11;
+        private DayControl dayControl12;
+        private DayControl dayControl13;
     }
 }
 
