@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Paula\\source\\repos\\Calendar\\Calendar\\Calendar.csproj": {}
+    "C:\\Users\\Paula\\Documents\\GitHub\\Calendar\\Calendar\\Calendar\\Calendar.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Paula\\source\\repos\\Calendar\\Calendar\\Calendar.csproj": {
+    "C:\\Users\\Paula\\Documents\\GitHub\\Calendar\\Calendar\\Calendar\\Calendar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Paula\\source\\repos\\Calendar\\Calendar\\Calendar.csproj",
+        "projectUniqueName": "C:\\Users\\Paula\\Documents\\GitHub\\Calendar\\Calendar\\Calendar\\Calendar.csproj",
         "projectName": "Calendar",
-        "projectPath": "C:\\Users\\Paula\\source\\repos\\Calendar\\Calendar\\Calendar.csproj",
+        "projectPath": "C:\\Users\\Paula\\Documents\\GitHub\\Calendar\\Calendar\\Calendar\\Calendar.csproj",
         "packagesPath": "C:\\Users\\Paula\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Paula\\source\\repos\\Calendar\\Calendar\\obj\\",
+        "outputPath": "C:\\Users\\Paula\\Documents\\GitHub\\Calendar\\Calendar\\Calendar\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Paula\\AppData\\Roaming\\NuGet\\NuGet.Config",
