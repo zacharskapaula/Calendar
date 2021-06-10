@@ -31,7 +31,7 @@ namespace Calendar
 
 
 
-        private System.Windows.Forms.TextBox textBox1;
+        //private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TableLayoutPanel caledarNet;
         private DayControl dayControl5;
         private DayControl dayControl3;
@@ -42,6 +42,36 @@ namespace Calendar
         private DayControl dayControl7;
         private DayControl dayControl8;
         private DayControl dayControl9;
+        private DayControl dayControl10;
+        private DayControl dayControl13;
+        private DayControl dayControl11;
+        private DayControl dayControl12;
+        private DayControl dayControl14;
+        private DayControl dayControl15;
+        private DayControl dayControl16;
+        private DayControl dayControl17;
+        private DayControl dayControl18;
+        private DayControl dayControl19;
+        private DayControl dayControl20;
+        private DayControl dayControl21;
+        private DayControl dayControl22;
+        private DayControl dayControl23;
+        private DayControl dayControl24;
+        private DayControl dayControl25;
+        private DayControl dayControl26;
+        private DayControl dayControl27;
+        private DayControl dayControl28;
+        private DayControl dayControl29;
+        private DayControl dayControl30;
+        private DayControl dayControl31;
+        private DayControl dayControl32;
+        private DayControl dayControl33;
+        private DayControl dayControl34;
+        private DayControl dayControl35;
+        
+        private System.Windows.Forms.Button commitButton;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
