@@ -28,7 +28,6 @@ namespace Calendar
             this.caledarNet = new System.Windows.Forms.TableLayoutPanel();
             this.dayControl3 = new Calendar.DayControl();
             this.dayControl4 = new Calendar.DayControl();
-            this.dayControl1 = new Calendar.DayControl();
             this.dayControl2 = new Calendar.DayControl();
             this.dayControl5 = new Calendar.DayControl();
             this.dayControl6 = new Calendar.DayControl();
@@ -61,26 +60,34 @@ namespace Calendar
             this.dayControl30 = new Calendar.DayControl();
             this.dayControl35 = new Calendar.DayControl();
             this.dayControl31 = new Calendar.DayControl();
+            this.dayControl1 = new Calendar.DayControl();
             this.commitButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.eventTextBox = new System.Windows.Forms.TextBox();
+            this.eventLabel = new System.Windows.Forms.Label();
+            this.mondayLabel = new System.Windows.Forms.Label();
+            this.tuesdayLabel = new System.Windows.Forms.Label();
+            this.wednesdayLabel = new System.Windows.Forms.Label();
+            this.thursdayLabel = new System.Windows.Forms.Label();
+            this.fridayLabel = new System.Windows.Forms.Label();
+            this.saturdayLabel = new System.Windows.Forms.Label();
+            this.sundayLabel = new System.Windows.Forms.Label();
             this.caledarNet.SuspendLayout();
             this.SuspendLayout();
             // 
             // caledarNet
             // 
-            this.caledarNet.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.caledarNet.BackColor = System.Drawing.Color.ForestGreen;
+            this.caledarNet.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.caledarNet.ColumnCount = 7;
-            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.40712F));
-            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.59288F));
-            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
-            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
-            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 145F));
-            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
-            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
+            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28594F));
+            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28438F));
+            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28594F));
+            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28594F));
+            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28594F));
+            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28594F));
+            this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28594F));
             this.caledarNet.Controls.Add(this.dayControl3, 2, 0);
             this.caledarNet.Controls.Add(this.dayControl4, 4, 0);
-            this.caledarNet.Controls.Add(this.dayControl1, 0, 0);
             this.caledarNet.Controls.Add(this.dayControl2, 1, 0);
             this.caledarNet.Controls.Add(this.dayControl5, 3, 0);
             this.caledarNet.Controls.Add(this.dayControl6, 5, 0);
@@ -113,264 +120,265 @@ namespace Calendar
             this.caledarNet.Controls.Add(this.dayControl30, 1, 4);
             this.caledarNet.Controls.Add(this.dayControl35, 6, 4);
             this.caledarNet.Controls.Add(this.dayControl31, 2, 4);
-            this.caledarNet.Location = new System.Drawing.Point(58, 45);
+            this.caledarNet.Controls.Add(this.dayControl1, 0, 0);
+            this.caledarNet.Location = new System.Drawing.Point(87, 51);
             this.caledarNet.Name = "caledarNet";
             this.caledarNet.RowCount = 5;
-            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.35622F));
-            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.64378F));
-            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 124F));
-            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 116F));
-            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 113F));
-            this.caledarNet.Size = new System.Drawing.Size(977, 592);
+            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.94863F));
+            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.20548F));
+            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.94863F));
+            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.94863F));
+            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.94863F));
+            this.caledarNet.Size = new System.Drawing.Size(877, 570);
             this.caledarNet.TabIndex = 0;
             this.caledarNet.Paint += new System.Windows.Forms.PaintEventHandler(this.caledarNet_Paint);
             // 
             // dayControl3
             // 
-            this.dayControl3.Location = new System.Drawing.Point(272, 3);
+            this.dayControl3.Location = new System.Drawing.Point(254, 6);
             this.dayControl3.Name = "dayControl3";
-            this.dayControl3.Size = new System.Drawing.Size(120, 109);
+            this.dayControl3.Size = new System.Drawing.Size(115, 104);
             this.dayControl3.TabIndex = 2;
             // 
             // dayControl4
             // 
-            this.dayControl4.Location = new System.Drawing.Point(561, 3);
+            this.dayControl4.Location = new System.Drawing.Point(502, 6);
             this.dayControl4.Name = "dayControl4";
-            this.dayControl4.Size = new System.Drawing.Size(120, 109);
+            this.dayControl4.Size = new System.Drawing.Size(115, 104);
             this.dayControl4.TabIndex = 3;
-            // 
-            // dayControl1
-            // 
-            this.dayControl1.Location = new System.Drawing.Point(3, 3);
-            this.dayControl1.Name = "dayControl1";
-            this.dayControl1.Size = new System.Drawing.Size(120, 109);
-            this.dayControl1.TabIndex = 0;
-            this.dayControl1.Load += new System.EventHandler(this.dayControl1_Load_1);
-            this.dayControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dayControl1_MouseDown);
             // 
             // dayControl2
             // 
-            this.dayControl2.Location = new System.Drawing.Point(136, 3);
+            this.dayControl2.Location = new System.Drawing.Point(130, 6);
             this.dayControl2.Name = "dayControl2";
-            this.dayControl2.Size = new System.Drawing.Size(120, 109);
+            this.dayControl2.Size = new System.Drawing.Size(115, 104);
             this.dayControl2.TabIndex = 1;
             // 
             // dayControl5
             // 
-            this.dayControl5.Location = new System.Drawing.Point(415, 3);
+            this.dayControl5.Location = new System.Drawing.Point(378, 6);
             this.dayControl5.Name = "dayControl5";
-            this.dayControl5.Size = new System.Drawing.Size(120, 109);
+            this.dayControl5.Size = new System.Drawing.Size(115, 104);
             this.dayControl5.TabIndex = 4;
             // 
             // dayControl6
             // 
-            this.dayControl6.Location = new System.Drawing.Point(706, 3);
+            this.dayControl6.Location = new System.Drawing.Point(626, 6);
             this.dayControl6.Name = "dayControl6";
-            this.dayControl6.Size = new System.Drawing.Size(120, 109);
+            this.dayControl6.Size = new System.Drawing.Size(115, 104);
             this.dayControl6.TabIndex = 5;
             // 
             // dayControl7
             // 
-            this.dayControl7.Location = new System.Drawing.Point(836, 3);
+            this.dayControl7.Location = new System.Drawing.Point(750, 6);
             this.dayControl7.Name = "dayControl7";
-            this.dayControl7.Size = new System.Drawing.Size(120, 109);
+            this.dayControl7.Size = new System.Drawing.Size(120, 104);
             this.dayControl7.TabIndex = 6;
             // 
             // dayControl13
             // 
-            this.dayControl13.Location = new System.Drawing.Point(3, 120);
+            this.dayControl13.Location = new System.Drawing.Point(6, 119);
             this.dayControl13.Name = "dayControl13";
-            this.dayControl13.Size = new System.Drawing.Size(120, 109);
+            this.dayControl13.Size = new System.Drawing.Size(115, 105);
             this.dayControl13.TabIndex = 12;
             // 
             // dayControl9
             // 
-            this.dayControl9.Location = new System.Drawing.Point(136, 120);
+            this.dayControl9.Location = new System.Drawing.Point(130, 119);
             this.dayControl9.Name = "dayControl9";
-            this.dayControl9.Size = new System.Drawing.Size(120, 109);
+            this.dayControl9.Size = new System.Drawing.Size(115, 105);
             this.dayControl9.TabIndex = 8;
             // 
             // dayControl10
             // 
-            this.dayControl10.Location = new System.Drawing.Point(272, 120);
+            this.dayControl10.Location = new System.Drawing.Point(254, 119);
             this.dayControl10.Name = "dayControl10";
-            this.dayControl10.Size = new System.Drawing.Size(120, 109);
+            this.dayControl10.Size = new System.Drawing.Size(115, 105);
             this.dayControl10.TabIndex = 9;
             // 
             // dayControl11
             // 
-            this.dayControl11.Location = new System.Drawing.Point(415, 120);
+            this.dayControl11.Location = new System.Drawing.Point(378, 119);
             this.dayControl11.Name = "dayControl11";
-            this.dayControl11.Size = new System.Drawing.Size(120, 109);
+            this.dayControl11.Size = new System.Drawing.Size(115, 105);
             this.dayControl11.TabIndex = 10;
             // 
             // dayControl12
             // 
-            this.dayControl12.Location = new System.Drawing.Point(561, 120);
+            this.dayControl12.Location = new System.Drawing.Point(502, 119);
             this.dayControl12.Name = "dayControl12";
-            this.dayControl12.Size = new System.Drawing.Size(120, 109);
+            this.dayControl12.Size = new System.Drawing.Size(115, 105);
             this.dayControl12.TabIndex = 11;
             // 
             // dayControl8
             // 
-            this.dayControl8.Location = new System.Drawing.Point(706, 120);
+            this.dayControl8.Location = new System.Drawing.Point(626, 119);
             this.dayControl8.Name = "dayControl8";
-            this.dayControl8.Size = new System.Drawing.Size(120, 109);
+            this.dayControl8.Size = new System.Drawing.Size(115, 105);
             this.dayControl8.TabIndex = 7;
             // 
             // dayControl14
             // 
-            this.dayControl14.Location = new System.Drawing.Point(836, 120);
+            this.dayControl14.Location = new System.Drawing.Point(750, 119);
             this.dayControl14.Name = "dayControl14";
-            this.dayControl14.Size = new System.Drawing.Size(120, 109);
+            this.dayControl14.Size = new System.Drawing.Size(120, 105);
             this.dayControl14.TabIndex = 13;
             // 
             // dayControl15
             // 
-            this.dayControl15.Location = new System.Drawing.Point(3, 241);
+            this.dayControl15.Location = new System.Drawing.Point(6, 233);
             this.dayControl15.Name = "dayControl15";
-            this.dayControl15.Size = new System.Drawing.Size(120, 109);
+            this.dayControl15.Size = new System.Drawing.Size(115, 104);
             this.dayControl15.TabIndex = 14;
             // 
             // dayControl16
             // 
-            this.dayControl16.Location = new System.Drawing.Point(136, 241);
+            this.dayControl16.Location = new System.Drawing.Point(130, 233);
             this.dayControl16.Name = "dayControl16";
-            this.dayControl16.Size = new System.Drawing.Size(120, 109);
+            this.dayControl16.Size = new System.Drawing.Size(115, 104);
             this.dayControl16.TabIndex = 15;
             // 
             // dayControl17
             // 
-            this.dayControl17.Location = new System.Drawing.Point(272, 241);
+            this.dayControl17.Location = new System.Drawing.Point(254, 233);
             this.dayControl17.Name = "dayControl17";
-            this.dayControl17.Size = new System.Drawing.Size(120, 109);
+            this.dayControl17.Size = new System.Drawing.Size(115, 104);
             this.dayControl17.TabIndex = 16;
             // 
             // dayControl18
             // 
-            this.dayControl18.Location = new System.Drawing.Point(415, 241);
+            this.dayControl18.Location = new System.Drawing.Point(378, 233);
             this.dayControl18.Name = "dayControl18";
-            this.dayControl18.Size = new System.Drawing.Size(120, 109);
+            this.dayControl18.Size = new System.Drawing.Size(115, 104);
             this.dayControl18.TabIndex = 17;
             // 
             // dayControl19
             // 
-            this.dayControl19.Location = new System.Drawing.Point(561, 241);
+            this.dayControl19.Location = new System.Drawing.Point(502, 233);
             this.dayControl19.Name = "dayControl19";
-            this.dayControl19.Size = new System.Drawing.Size(120, 109);
+            this.dayControl19.Size = new System.Drawing.Size(115, 104);
             this.dayControl19.TabIndex = 18;
             // 
             // dayControl20
             // 
-            this.dayControl20.Location = new System.Drawing.Point(706, 241);
+            this.dayControl20.Location = new System.Drawing.Point(626, 233);
             this.dayControl20.Name = "dayControl20";
-            this.dayControl20.Size = new System.Drawing.Size(120, 109);
+            this.dayControl20.Size = new System.Drawing.Size(115, 104);
             this.dayControl20.TabIndex = 19;
             // 
             // dayControl21
             // 
-            this.dayControl21.Location = new System.Drawing.Point(836, 241);
+            this.dayControl21.Location = new System.Drawing.Point(750, 233);
             this.dayControl21.Name = "dayControl21";
-            this.dayControl21.Size = new System.Drawing.Size(120, 109);
+            this.dayControl21.Size = new System.Drawing.Size(120, 104);
             this.dayControl21.TabIndex = 20;
             // 
             // dayControl22
             // 
-            this.dayControl22.Location = new System.Drawing.Point(3, 365);
+            this.dayControl22.Location = new System.Drawing.Point(6, 346);
             this.dayControl22.Name = "dayControl22";
-            this.dayControl22.Size = new System.Drawing.Size(120, 109);
+            this.dayControl22.Size = new System.Drawing.Size(115, 104);
             this.dayControl22.TabIndex = 21;
             // 
             // dayControl23
             // 
-            this.dayControl23.Location = new System.Drawing.Point(136, 365);
+            this.dayControl23.Location = new System.Drawing.Point(130, 346);
             this.dayControl23.Name = "dayControl23";
-            this.dayControl23.Size = new System.Drawing.Size(120, 109);
+            this.dayControl23.Size = new System.Drawing.Size(115, 104);
             this.dayControl23.TabIndex = 22;
             // 
             // dayControl24
             // 
-            this.dayControl24.Location = new System.Drawing.Point(272, 365);
+            this.dayControl24.Location = new System.Drawing.Point(254, 346);
             this.dayControl24.Name = "dayControl24";
-            this.dayControl24.Size = new System.Drawing.Size(120, 109);
+            this.dayControl24.Size = new System.Drawing.Size(115, 104);
             this.dayControl24.TabIndex = 23;
             // 
             // dayControl25
             // 
-            this.dayControl25.Location = new System.Drawing.Point(415, 365);
+            this.dayControl25.Location = new System.Drawing.Point(378, 346);
             this.dayControl25.Name = "dayControl25";
-            this.dayControl25.Size = new System.Drawing.Size(120, 109);
+            this.dayControl25.Size = new System.Drawing.Size(115, 104);
             this.dayControl25.TabIndex = 24;
             // 
             // dayControl26
             // 
-            this.dayControl26.Location = new System.Drawing.Point(561, 365);
+            this.dayControl26.Location = new System.Drawing.Point(502, 346);
             this.dayControl26.Name = "dayControl26";
-            this.dayControl26.Size = new System.Drawing.Size(120, 109);
+            this.dayControl26.Size = new System.Drawing.Size(115, 104);
             this.dayControl26.TabIndex = 25;
             // 
             // dayControl27
             // 
-            this.dayControl27.Location = new System.Drawing.Point(706, 365);
+            this.dayControl27.Location = new System.Drawing.Point(626, 346);
             this.dayControl27.Name = "dayControl27";
-            this.dayControl27.Size = new System.Drawing.Size(120, 109);
+            this.dayControl27.Size = new System.Drawing.Size(115, 104);
             this.dayControl27.TabIndex = 26;
             // 
             // dayControl28
             // 
-            this.dayControl28.Location = new System.Drawing.Point(836, 365);
+            this.dayControl28.Location = new System.Drawing.Point(750, 346);
             this.dayControl28.Name = "dayControl28";
-            this.dayControl28.Size = new System.Drawing.Size(120, 109);
+            this.dayControl28.Size = new System.Drawing.Size(120, 104);
             this.dayControl28.TabIndex = 27;
             // 
             // dayControl32
             // 
-            this.dayControl32.Location = new System.Drawing.Point(415, 481);
+            this.dayControl32.Location = new System.Drawing.Point(378, 459);
             this.dayControl32.Name = "dayControl32";
-            this.dayControl32.Size = new System.Drawing.Size(120, 108);
+            this.dayControl32.Size = new System.Drawing.Size(115, 105);
             this.dayControl32.TabIndex = 31;
             // 
             // dayControl33
             // 
-            this.dayControl33.Location = new System.Drawing.Point(561, 481);
+            this.dayControl33.Location = new System.Drawing.Point(502, 459);
             this.dayControl33.Name = "dayControl33";
-            this.dayControl33.Size = new System.Drawing.Size(120, 108);
+            this.dayControl33.Size = new System.Drawing.Size(115, 105);
             this.dayControl33.TabIndex = 32;
             // 
             // dayControl29
             // 
-            this.dayControl29.Location = new System.Drawing.Point(3, 481);
+            this.dayControl29.Location = new System.Drawing.Point(6, 459);
             this.dayControl29.Name = "dayControl29";
-            this.dayControl29.Size = new System.Drawing.Size(120, 108);
+            this.dayControl29.Size = new System.Drawing.Size(115, 105);
             this.dayControl29.TabIndex = 28;
             // 
             // dayControl34
             // 
-            this.dayControl34.Location = new System.Drawing.Point(706, 481);
+            this.dayControl34.Location = new System.Drawing.Point(626, 459);
             this.dayControl34.Name = "dayControl34";
-            this.dayControl34.Size = new System.Drawing.Size(120, 108);
+            this.dayControl34.Size = new System.Drawing.Size(115, 105);
             this.dayControl34.TabIndex = 33;
             // 
             // dayControl30
             // 
-            this.dayControl30.Location = new System.Drawing.Point(136, 481);
+            this.dayControl30.Location = new System.Drawing.Point(130, 459);
             this.dayControl30.Name = "dayControl30";
-            this.dayControl30.Size = new System.Drawing.Size(120, 108);
+            this.dayControl30.Size = new System.Drawing.Size(115, 105);
             this.dayControl30.TabIndex = 29;
             // 
             // dayControl35
             // 
-            this.dayControl35.Location = new System.Drawing.Point(836, 481);
+            this.dayControl35.Location = new System.Drawing.Point(750, 459);
             this.dayControl35.Name = "dayControl35";
-            this.dayControl35.Size = new System.Drawing.Size(120, 108);
+            this.dayControl35.Size = new System.Drawing.Size(120, 105);
             this.dayControl35.TabIndex = 34;
             // 
             // dayControl31
             // 
-            this.dayControl31.Location = new System.Drawing.Point(272, 481);
+            this.dayControl31.Location = new System.Drawing.Point(254, 459);
             this.dayControl31.Name = "dayControl31";
-            this.dayControl31.Size = new System.Drawing.Size(120, 108);
+            this.dayControl31.Size = new System.Drawing.Size(115, 105);
             this.dayControl31.TabIndex = 30;
+            // 
+            // dayControl1
+            // 
+            this.dayControl1.Location = new System.Drawing.Point(6, 6);
+            this.dayControl1.Name = "dayControl1";
+            this.dayControl1.Size = new System.Drawing.Size(115, 104);
+            this.dayControl1.TabIndex = 0;
+            this.dayControl1.Load += new System.EventHandler(this.dayControl1_Load_1);
+            this.dayControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dayControl1_MouseDown);
             // 
             // commitButton
             // 
@@ -381,27 +389,104 @@ namespace Calendar
             this.commitButton.Text = "COMMIT";
             this.commitButton.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // eventTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(330, 701);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(382, 23);
-            this.textBox1.TabIndex = 2;
+            this.eventTextBox.Location = new System.Drawing.Point(330, 701);
+            this.eventTextBox.Name = "eventTextBox";
+            this.eventTextBox.Size = new System.Drawing.Size(382, 23);
+            this.eventTextBox.TabIndex = 2;
             // 
-            // label1
+            // eventLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(330, 673);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 15);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Add an event or reminder";
+            this.eventLabel.AutoSize = true;
+            this.eventLabel.Location = new System.Drawing.Point(330, 673);
+            this.eventLabel.Name = "eventLabel";
+            this.eventLabel.Size = new System.Drawing.Size(142, 15);
+            this.eventLabel.TabIndex = 3;
+            this.eventLabel.Text = "Add an event or reminder";
+            // 
+            // mondayLabel
+            // 
+            this.mondayLabel.AutoSize = true;
+            this.mondayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.mondayLabel.Location = new System.Drawing.Point(121, 23);
+            this.mondayLabel.Name = "mondayLabel";
+            this.mondayLabel.Size = new System.Drawing.Size(58, 15);
+            this.mondayLabel.TabIndex = 4;
+            this.mondayLabel.Text = "MONDAY";
+            // 
+            // tuesdayLabel
+            // 
+            this.tuesdayLabel.AutoSize = true;
+            this.tuesdayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.tuesdayLabel.Location = new System.Drawing.Point(243, 23);
+            this.tuesdayLabel.Name = "tuesdayLabel";
+            this.tuesdayLabel.Size = new System.Drawing.Size(55, 15);
+            this.tuesdayLabel.TabIndex = 5;
+            this.tuesdayLabel.Text = "TUESDAY";
+            // 
+            // wednesdayLabel
+            // 
+            this.wednesdayLabel.AutoSize = true;
+            this.wednesdayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.wednesdayLabel.Location = new System.Drawing.Point(363, 23);
+            this.wednesdayLabel.Name = "wednesdayLabel";
+            this.wednesdayLabel.Size = new System.Drawing.Size(75, 15);
+            this.wednesdayLabel.TabIndex = 6;
+            this.wednesdayLabel.Text = "WEDNESDAY";
+            // 
+            // thursdayLabel
+            // 
+            this.thursdayLabel.AutoSize = true;
+            this.thursdayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.thursdayLabel.Location = new System.Drawing.Point(490, 23);
+            this.thursdayLabel.Name = "thursdayLabel";
+            this.thursdayLabel.Size = new System.Drawing.Size(65, 15);
+            this.thursdayLabel.TabIndex = 7;
+            this.thursdayLabel.Text = "THURSDAY";
+            // 
+            // fridayLabel
+            // 
+            this.fridayLabel.AutoSize = true;
+            this.fridayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.fridayLabel.Location = new System.Drawing.Point(622, 23);
+            this.fridayLabel.Name = "fridayLabel";
+            this.fridayLabel.Size = new System.Drawing.Size(45, 15);
+            this.fridayLabel.TabIndex = 8;
+            this.fridayLabel.Text = "FRIDAY";
+            // 
+            // saturdayLabel
+            // 
+            this.saturdayLabel.AutoSize = true;
+            this.saturdayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.saturdayLabel.Location = new System.Drawing.Point(738, 23);
+            this.saturdayLabel.Name = "saturdayLabel";
+            this.saturdayLabel.Size = new System.Drawing.Size(63, 15);
+            this.saturdayLabel.TabIndex = 9;
+            this.saturdayLabel.Text = "SATURDAY";
+            // 
+            // sundayLabel
+            // 
+            this.sundayLabel.AutoSize = true;
+            this.sundayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.sundayLabel.Location = new System.Drawing.Point(872, 23);
+            this.sundayLabel.Name = "sundayLabel";
+            this.sundayLabel.Size = new System.Drawing.Size(52, 15);
+            this.sundayLabel.TabIndex = 10;
+            this.sundayLabel.Text = "SUNDAY";
             // 
             // CalendarForm
             // 
             this.ClientSize = new System.Drawing.Size(1087, 771);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.sundayLabel);
+            this.Controls.Add(this.saturdayLabel);
+            this.Controls.Add(this.fridayLabel);
+            this.Controls.Add(this.thursdayLabel);
+            this.Controls.Add(this.wednesdayLabel);
+            this.Controls.Add(this.tuesdayLabel);
+            this.Controls.Add(this.mondayLabel);
+            this.Controls.Add(this.eventLabel);
+            this.Controls.Add(this.eventTextBox);
             this.Controls.Add(this.commitButton);
             this.Controls.Add(this.caledarNet);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

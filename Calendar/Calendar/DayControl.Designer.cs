@@ -30,33 +30,22 @@ namespace Calendar
         private void InitializeComponent()
         {
             this.dayUserControl = new System.Windows.Forms.Label();
-            this.eventName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dayUserControl
             // 
             this.dayUserControl.AutoSize = true;
-            this.dayUserControl.Location = new System.Drawing.Point(34, 32);
+            this.dayUserControl.Location = new System.Drawing.Point(62, 11);
             this.dayUserControl.Name = "dayUserControl";
             this.dayUserControl.Size = new System.Drawing.Size(29, 15);
             this.dayUserControl.TabIndex = 1;
             this.dayUserControl.Text = "DAY";
             this.dayUserControl.Click += new System.EventHandler(this.label2_Click);
             // 
-            // eventName
-            // 
-            this.eventName.AutoSize = true;
-            this.eventName.Location = new System.Drawing.Point(22, 61);
-            this.eventName.Name = "eventName";
-            this.eventName.Size = new System.Drawing.Size(58, 15);
-            this.eventName.TabIndex = 2;
-            this.eventName.Text = "no events";
-            // 
             // DayControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.eventName);
             this.Controls.Add(this.dayUserControl);
             this.Name = "DayControl";
             this.Size = new System.Drawing.Size(104, 100);
@@ -67,6 +56,5 @@ namespace Calendar
 
         #endregion
         private System.Windows.Forms.Label dayUserControl;
-        private System.Windows.Forms.Label eventName;
     }
 }
