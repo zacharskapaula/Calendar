@@ -35,3 +35,4 @@ C:\Users\Paula\Documents\GitHub\Calendar\Calendar\Calendar\obj\Debug\net5.0-wind
 C:\Users\Paula\Documents\GitHub\Calendar\Calendar\Calendar\obj\Debug\net5.0-windows\Calendar.pdb
 C:\Users\Paula\Documents\GitHub\Calendar\Calendar\Calendar\obj\Debug\net5.0-windows\Calendar.genruntimeconfig.cache
 C:\Users\Paula\Documents\GitHub\Calendar\Calendar\Calendar\obj\Debug\net5.0-windows\Calendar.DayControl.resources
+C:\Users\Paula\Documents\GitHub\Calendar\Calendar\Calendar\obj\Debug\net5.0-windows\Calendar.Properties.Resources.resources
