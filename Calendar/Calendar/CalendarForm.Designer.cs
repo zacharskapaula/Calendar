@@ -70,8 +70,15 @@ namespace Calendar
         private DayControl dayControl35;
         
         private System.Windows.Forms.Button commitButton;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox eventTextBox;
+        private System.Windows.Forms.Label eventLabel;
+        private System.Windows.Forms.Label mondayLabel;
+        private System.Windows.Forms.Label tuesdayLabel;
+        private System.Windows.Forms.Label wednesdayLabel;
+        private System.Windows.Forms.Label thursdayLabel;
+        private System.Windows.Forms.Label fridayLabel;
+        private System.Windows.Forms.Label saturdayLabel;
+        private System.Windows.Forms.Label sundayLabel;
     }
 }
 
