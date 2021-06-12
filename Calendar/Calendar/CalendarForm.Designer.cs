@@ -21,10 +21,11 @@ namespace Calendar
             base.Dispose(disposing);
             
         }
-
+         
         public partial class DayContol : CalendarForm
         {
             DayContol day1 = new DayContol();
+
             
         }
 
