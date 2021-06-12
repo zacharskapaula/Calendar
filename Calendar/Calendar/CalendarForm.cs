@@ -1,19 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.IO;
 
 namespace Calendar
 {
     public partial class CalendarForm : Form
     {
+        private List<DayControl> _days = new List<DayControl>(35);
+        
         public CalendarForm()
         {
+            DaysControl();
             InitializeComponent();
         }
 
@@ -21,6 +25,39 @@ namespace Calendar
         {
 
         }
+        
+        public void DaysControl()
+        {
+            for(int i = 0; i < _days.Count; ++i)
+            {
+                _days[i] = new DayControl();
+               
+            }
+            var firstOfMonth = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            var lastDayOfMonth = firstOfMonth.AddMonths(1).AddDays(-1);
+
+            int daysInMonth = DateTime.DaysInMonth(firstOfMonth.Year, firstOfMonth.Month);
+
+            int startIndex = (int)firstOfMonth.DayOfWeek - 1;
+            int daysToAddToControlsDate = 0;
+
+            for (int i = startIndex; i < _days.Count; ++i)
+            {
+                /*if (daysToAddToControlsDate >= daysInMonth)
+                {
+                    firstOfMonth = new DateTime(firstOfMonth.Year, firstOfMonth.Month + 1, 1);
+                    daysToAddToControlsDate = 0;
+                }*/
+
+
+                _days[i].DateTime= firstOfMonth.AddDays(daysToAddToControlsDate++);
+                
+
+            }
+
+        }
+
+        
 
         private void InitializeComponent()
         {
@@ -492,6 +529,7 @@ namespace Calendar
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CalendarForm";
             this.Text = "Calendar";
+            this.Load += new System.EventHandler(this.CalendarForm_Load);
             this.caledarNet.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -516,6 +554,11 @@ namespace Calendar
         private void dayControl1_MouseDown(object sender, MouseEventArgs e)
         {
             
+        }
+
+        private void CalendarForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
