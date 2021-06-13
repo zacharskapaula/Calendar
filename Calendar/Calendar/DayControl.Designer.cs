@@ -4,8 +4,9 @@ namespace Calendar
 {
     partial class DayControl
     {
-        public DateTime DateTime;
-       
+        
+
+
         /// <summary> 
         /// Wymagana zmienna projektanta.
         /// </summary>
