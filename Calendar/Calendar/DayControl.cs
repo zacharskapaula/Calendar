@@ -12,13 +12,30 @@ namespace Calendar
 {
     public partial class DayControl : UserControl
     {
+        public DateTime _date;
+        public DateTime Date    
+        {
+            get => _date;
+            set
+            {
+                _date = value;
+                dayUserControl.Text = _date.ToString();
+            }
+        }
+
+        
+
         public DayControl()
         {
+
+
             InitializeComponent();
 
-           
+
 
         }
+   
+         
 
         private void label2_Click(object sender, EventArgs e)
         {

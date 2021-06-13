@@ -13,7 +13,9 @@ namespace Calendar
 {
     public partial class CalendarForm : Form
     {
+        
         private List<DayControl> _days = new List<DayControl>(35);
+        
         
         public CalendarForm()
         {
@@ -43,23 +45,24 @@ namespace Calendar
 
             for (int i = startIndex; i < _days.Count; ++i)
             {
-                /*if (daysToAddToControlsDate >= daysInMonth)
+                if (daysToAddToControlsDate >= daysInMonth)
                 {
                     firstOfMonth = new DateTime(firstOfMonth.Year, firstOfMonth.Month + 1, 1);
                     daysToAddToControlsDate = 0;
-                }*/
+                }
 
 
-                _days[i].DateTime= firstOfMonth.AddDays(daysToAddToControlsDate++);
+                _days[i].Date= firstOfMonth.AddDays(daysToAddToControlsDate++);
                 
 
             }
+            
+              
+    }
 
-        }
 
-        
 
-        private void InitializeComponent()
+    private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarForm));
             this.caledarNet = new System.Windows.Forms.TableLayoutPanel();
