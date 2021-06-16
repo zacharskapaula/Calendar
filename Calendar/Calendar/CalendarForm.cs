@@ -15,21 +15,37 @@ namespace Calendar
     {
 
         private List<DayControl> _days = new List<DayControl>(35);
-        
+        private DateTime currentDate;
         public CalendarForm()
         {
             InitializeComponent();
-            DaysControl();
-           
-
+            UpdateCalendarView();
+            DisplayCurrentMonth();
+            AddMonth();
+            MinMonth();
         }
-           
+        public void DisplayCurrentMonth()
+        {
+            monthLabel.Text = currentDate.ToString("MMMM");
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             
         }
+
+        public void AddMonth()
+        {
+            currentDate = currentDate.AddMonths(+1);
+            DisplayCurrentMonth();
+        }
+
+        public void MinMonth()
+        {
+            currentDate = currentDate.AddMonths(-1);
+            DisplayCurrentMonth();
+        }
        
-        public void DaysControl()
+        public void UpdateCalendarView ()
         {
             int column=0, row = 0;
             for(int i = 0; i <= 35; ++i)
@@ -53,21 +69,26 @@ namespace Calendar
             int startIndex = (int)firstOfMonth.DayOfWeek - 1;
             int adddaystoControl = 0;
 
-            for(int i = startIndex - 1; i >= 0; --i)
+            
+
+            for (int i = startIndex - 1; i >= 0; --i)
 {
                 _days[i].Date = firstOfMonth.AddDays(i - startIndex);
 }
 
-            for(int i = startIndex; i < 35; ++i)
+            for(int i = startIndex; i < _days.Count; ++i)
 {
                 _days[i].Date = firstOfMonth.AddDays(adddaystoControl++);
                 if (adddaystoControl >= daysInMonth)
                 {
-                    firstOfMonth = firstOfMonth.AddMonths(1);
+                    currentDate = currentDate.AddMonths(1);
+                    DisplayCurrentMonth();
+
                 }
             }
-            
 
+        
+         
     }
 
 
@@ -86,6 +107,9 @@ namespace Calendar
             this.fridayLabel = new System.Windows.Forms.Label();
             this.saturdayLabel = new System.Windows.Forms.Label();
             this.sundayLabel = new System.Windows.Forms.Label();
+            this.previousButton = new System.Windows.Forms.Button();
+            this.nextButton = new System.Windows.Forms.Button();
+            this.monthLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // caledarNet
@@ -100,7 +124,7 @@ namespace Calendar
             this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28594F));
             this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28594F));
             this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28594F));
-            this.caledarNet.Location = new System.Drawing.Point(87, 51);
+            this.caledarNet.Location = new System.Drawing.Point(87, 114);
             this.caledarNet.Name = "caledarNet";
             this.caledarNet.RowCount = 5;
             this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.94863F));
@@ -114,7 +138,7 @@ namespace Calendar
             // 
             // commitButton
             // 
-            this.commitButton.Location = new System.Drawing.Point(728, 701);
+            this.commitButton.Location = new System.Drawing.Point(728, 736);
             this.commitButton.Name = "commitButton";
             this.commitButton.Size = new System.Drawing.Size(99, 24);
             this.commitButton.TabIndex = 1;
@@ -123,7 +147,7 @@ namespace Calendar
             // 
             // eventTextBox
             // 
-            this.eventTextBox.Location = new System.Drawing.Point(330, 701);
+            this.eventTextBox.Location = new System.Drawing.Point(330, 736);
             this.eventTextBox.Name = "eventTextBox";
             this.eventTextBox.Size = new System.Drawing.Size(382, 23);
             this.eventTextBox.TabIndex = 2;
@@ -131,7 +155,7 @@ namespace Calendar
             // eventLabel
             // 
             this.eventLabel.AutoSize = true;
-            this.eventLabel.Location = new System.Drawing.Point(330, 673);
+            this.eventLabel.Location = new System.Drawing.Point(330, 706);
             this.eventLabel.Name = "eventLabel";
             this.eventLabel.Size = new System.Drawing.Size(142, 15);
             this.eventLabel.TabIndex = 3;
@@ -141,7 +165,7 @@ namespace Calendar
             // 
             this.mondayLabel.AutoSize = true;
             this.mondayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.mondayLabel.Location = new System.Drawing.Point(121, 23);
+            this.mondayLabel.Location = new System.Drawing.Point(123, 96);
             this.mondayLabel.Name = "mondayLabel";
             this.mondayLabel.Size = new System.Drawing.Size(58, 15);
             this.mondayLabel.TabIndex = 4;
@@ -151,7 +175,7 @@ namespace Calendar
             // 
             this.tuesdayLabel.AutoSize = true;
             this.tuesdayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.tuesdayLabel.Location = new System.Drawing.Point(243, 23);
+            this.tuesdayLabel.Location = new System.Drawing.Point(243, 96);
             this.tuesdayLabel.Name = "tuesdayLabel";
             this.tuesdayLabel.Size = new System.Drawing.Size(55, 15);
             this.tuesdayLabel.TabIndex = 5;
@@ -161,7 +185,7 @@ namespace Calendar
             // 
             this.wednesdayLabel.AutoSize = true;
             this.wednesdayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.wednesdayLabel.Location = new System.Drawing.Point(363, 23);
+            this.wednesdayLabel.Location = new System.Drawing.Point(359, 96);
             this.wednesdayLabel.Name = "wednesdayLabel";
             this.wednesdayLabel.Size = new System.Drawing.Size(75, 15);
             this.wednesdayLabel.TabIndex = 6;
@@ -171,7 +195,7 @@ namespace Calendar
             // 
             this.thursdayLabel.AutoSize = true;
             this.thursdayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.thursdayLabel.Location = new System.Drawing.Point(490, 23);
+            this.thursdayLabel.Location = new System.Drawing.Point(491, 96);
             this.thursdayLabel.Name = "thursdayLabel";
             this.thursdayLabel.Size = new System.Drawing.Size(65, 15);
             this.thursdayLabel.TabIndex = 7;
@@ -181,7 +205,7 @@ namespace Calendar
             // 
             this.fridayLabel.AutoSize = true;
             this.fridayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.fridayLabel.Location = new System.Drawing.Point(622, 23);
+            this.fridayLabel.Location = new System.Drawing.Point(626, 96);
             this.fridayLabel.Name = "fridayLabel";
             this.fridayLabel.Size = new System.Drawing.Size(45, 15);
             this.fridayLabel.TabIndex = 8;
@@ -191,7 +215,7 @@ namespace Calendar
             // 
             this.saturdayLabel.AutoSize = true;
             this.saturdayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.saturdayLabel.Location = new System.Drawing.Point(738, 23);
+            this.saturdayLabel.Location = new System.Drawing.Point(740, 96);
             this.saturdayLabel.Name = "saturdayLabel";
             this.saturdayLabel.Size = new System.Drawing.Size(63, 15);
             this.saturdayLabel.TabIndex = 9;
@@ -201,15 +225,48 @@ namespace Calendar
             // 
             this.sundayLabel.AutoSize = true;
             this.sundayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.sundayLabel.Location = new System.Drawing.Point(872, 23);
+            this.sundayLabel.Location = new System.Drawing.Point(870, 96);
             this.sundayLabel.Name = "sundayLabel";
             this.sundayLabel.Size = new System.Drawing.Size(52, 15);
             this.sundayLabel.TabIndex = 10;
             this.sundayLabel.Text = "SUNDAY";
             // 
+            // previousButton
+            // 
+            this.previousButton.Location = new System.Drawing.Point(87, 29);
+            this.previousButton.Name = "previousButton";
+            this.previousButton.Size = new System.Drawing.Size(99, 24);
+            this.previousButton.TabIndex = 11;
+            this.previousButton.Text = "PREVIOUS";
+            this.previousButton.UseVisualStyleBackColor = true;
+            this.previousButton.Click += new System.EventHandler(this.previousButton_Click);
+            // 
+            // nextButton
+            // 
+            this.nextButton.Location = new System.Drawing.Point(865, 29);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(99, 24);
+            this.nextButton.TabIndex = 12;
+            this.nextButton.Text = "NEXT";
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            // 
+            // monthLabel
+            // 
+            this.monthLabel.AutoSize = true;
+            this.monthLabel.Location = new System.Drawing.Point(506, 38);
+            this.monthLabel.Name = "monthLabel";
+            this.monthLabel.Size = new System.Drawing.Size(51, 15);
+            this.monthLabel.TabIndex = 13;
+            this.monthLabel.Text = "MONTH";
+            this.monthLabel.Click += new System.EventHandler(this.monthLabel_Click);
+            // 
             // CalendarForm
             // 
             this.ClientSize = new System.Drawing.Size(1087, 771);
+            this.Controls.Add(this.monthLabel);
+            this.Controls.Add(this.nextButton);
+            this.Controls.Add(this.previousButton);
             this.Controls.Add(this.sundayLabel);
             this.Controls.Add(this.saturdayLabel);
             this.Controls.Add(this.fridayLabel);
@@ -252,6 +309,22 @@ namespace Calendar
 
         private void CalendarForm_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            AddMonth();
+        }
+
+        private void previousButton_Click(object sender, EventArgs e)
+        {
+            MinMonth();
+        }
+
+        private void monthLabel_Click(object sender, EventArgs e)
+        {
+            
 
         }
     }

@@ -44,6 +44,9 @@ namespace Calendar
         private System.Windows.Forms.Label fridayLabel;
         private System.Windows.Forms.Label saturdayLabel;
         private System.Windows.Forms.Label sundayLabel;
+        private System.Windows.Forms.Button previousButton;
+        private System.Windows.Forms.Button nextButton;
+        private System.Windows.Forms.Label monthLabel;
     }
 }
 
