@@ -39,7 +39,7 @@ namespace Calendar
             // dayUserControl
             // 
             this.dayUserControl.AutoSize = true;
-            this.dayUserControl.Location = new System.Drawing.Point(62, 11);
+            this.dayUserControl.Location = new System.Drawing.Point(45, 15);
             this.dayUserControl.Name = "dayUserControl";
             this.dayUserControl.Size = new System.Drawing.Size(29, 15);
             this.dayUserControl.TabIndex = 1;

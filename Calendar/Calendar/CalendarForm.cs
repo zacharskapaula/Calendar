@@ -8,13 +8,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.IO;
+using System.Windows;
 
 namespace Calendar
 {
+    
+    
 
     public partial class CalendarForm : Form
     {
-        private List<DayControl> _days = new List<DayControl>(35); //lub 42
+        private List<DayControl> _days = new List<DayControl>(35);
         private DateTime currentDate;
         public CalendarForm()
         {
@@ -23,10 +26,9 @@ namespace Calendar
             InitializeDaysControls();
             UpdateCalendarView();
             DisplayCurrentMonth();
-            
-           
         }
 
+        
         private void UpdateCalendarView()
         {
 
@@ -70,7 +72,7 @@ namespace Calendar
         public void InitializeDaysControls()
         {
             int column = 0, row = 0;
-            for (int i = 0; i <= 35; ++i) //lub 42
+            for (int i = 0; i <= 35; ++i)
             {
                 var day = new DayControl();
                 _days.Add(day);
