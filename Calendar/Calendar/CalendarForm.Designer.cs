@@ -162,7 +162,7 @@ namespace Calendar
             // 
             // nextButton
             // 
-            this.nextButton.Location = new System.Drawing.Point(865, 29);
+            this.nextButton.Location = new System.Drawing.Point(941, 29);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(99, 24);
             this.nextButton.TabIndex = 12;
@@ -173,7 +173,7 @@ namespace Calendar
             // monthLabel
             // 
             this.monthLabel.AutoSize = true;
-            this.monthLabel.Location = new System.Drawing.Point(506, 38);
+            this.monthLabel.Location = new System.Drawing.Point(547, 29);
             this.monthLabel.Name = "monthLabel";
             this.monthLabel.Size = new System.Drawing.Size(51, 15);
             this.monthLabel.TabIndex = 13;
