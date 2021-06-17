@@ -41,8 +41,9 @@ namespace Calendar
             this.dayUserControl.AutoSize = true;
             this.dayUserControl.Location = new System.Drawing.Point(62, 11);
             this.dayUserControl.Name = "dayUserControl";
-            this.dayUserControl.Size = new System.Drawing.Size(0, 15);
+            this.dayUserControl.Size = new System.Drawing.Size(29, 15);
             this.dayUserControl.TabIndex = 1;
+            this.dayUserControl.Text = "DAY";
             this.dayUserControl.Click += new System.EventHandler(this.label2_Click);
             // 
             // DayControl
