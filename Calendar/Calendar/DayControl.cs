@@ -12,21 +12,12 @@ namespace Calendar
 {
     public partial class DayControl : UserControl
     {
-       
-        
-        
-
-
+        public event EventHandler DayClicked;
         public DayControl()
-        {
-            
+        {   
             InitializeComponent();
-
-            //dayUserControl.Text = _date.ToString();
-
-            //dayUserControl.Text = "1";
         }
-
+        
         public DateTime _date;
         public DateTime Date
         {
@@ -38,6 +29,10 @@ namespace Calendar
             }
         }
 
+        public void ClearSelection()
+        {
+            BackColor = Color.Green;
+        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -57,7 +52,8 @@ namespace Calendar
         private void DayControl_MouseClick(object sender, MouseEventArgs e)
         {
             BackColor = Color.White;
-            
+            DayClicked?.Invoke(this, new EventArgs());
+
         }
     }
 }
