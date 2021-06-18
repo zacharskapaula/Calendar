@@ -8,14 +8,14 @@ namespace Calendar
 {
     public class InMemoryCalendarEventData : ICalendarEventData
     {
-        private List<Event> reminder = new List<Event>(35);
+        public List<Event> reminder = new List<Event>(35);
         public InMemoryCalendarEventData()
         {
 
         }
-        public void GetEventsByMonth()
+        public List<Event> GetEventsByMonth(DateTime dateEvent)
         {
-
+            return reminder;
         }
         public void GetSettings()
         {

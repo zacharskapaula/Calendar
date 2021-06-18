@@ -8,9 +8,9 @@ namespace Calendar
 {
     public class Event
     {
-        string eventTile;
-        string eventDescription;
-        DateTime eventDate;
+        string title;
+        string description;
+        DateTime date;
     }
 
 

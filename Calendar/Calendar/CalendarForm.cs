@@ -13,10 +13,9 @@ using System.Windows;
 namespace Calendar
 {
     
-    
-
     public partial class CalendarForm : Form
     {
+        
         private List<DayControl> _days = new List<DayControl>(35);
         private DateTime currentDate;
         public CalendarForm()
@@ -28,7 +27,10 @@ namespace Calendar
             DisplayCurrentMonth();
         }
 
-        
+        /*public ICalendarData GetDataProvider()
+        {
+            return new InMemoryCalendarEventData();
+        }*/
         private void UpdateCalendarView()
         {
 
