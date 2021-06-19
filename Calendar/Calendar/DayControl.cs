@@ -13,6 +13,7 @@ namespace Calendar
     public partial class DayControl : UserControl
     {
         public event EventHandler DayClicked;
+        public List<Event> DayEvents { get; set; }
         public DayControl()
         {   
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace Calendar
             set
             {
                 _date = value;
-                dayUserControl.Text = _date.ToString();
+                dayUserControl.Text = _date.ToString("dd");
             }
         }
 
@@ -51,8 +52,9 @@ namespace Calendar
 
         private void DayControl_MouseClick(object sender, MouseEventArgs e)
         {
-            BackColor = Color.White;
+            BackColor = Color.LightBlue;
             DayClicked?.Invoke(this, new EventArgs());
+
 
         }
     }
