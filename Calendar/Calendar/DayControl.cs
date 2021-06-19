@@ -13,12 +13,24 @@ namespace Calendar
     public partial class DayControl : UserControl
     {
         public event EventHandler DayClicked;
-        public List<Event> DayEvents { get; set; }
-        public DayControl()
-        {   
-            InitializeComponent();
+        private List<Event> _dayEvents = new List<Event>(0);
+        public List<Event> DayEvents
+        {
+            get => _dayEvents;
+            set
+            {
+                _dayEvents = value;
+                EventsChanged();
+            }
         }
-        
+
+        public DayControl()
+        {
+            InitializeComponent();
+            lblEventMarker.DoubleClick += (s, e) => OnDoubleClick(e);
+            lblDayOfMonth.DoubleClick += (s, e) => OnDoubleClick(e);
+        }
+
         public DateTime _date;
         public DateTime Date
         {
@@ -26,15 +38,25 @@ namespace Calendar
             set
             {
                 _date = value;
-                dayUserControl.Text = _date.ToString("dd");
+                lblDayOfMonth.Text = _date.ToString("dd");
             }
         }
 
         public void ClearSelection()
         {
-            BackColor = Color.Green;
+            BackColor = Color.ForestGreen;
         }
 
+        private void EventsChanged()
+        {
+            lblEventMarker.Visible = _dayEvents?.Count > 0;
+        }
+
+        internal void Clear()
+        {
+            _dayEvents.Clear();
+            lblEventMarker.Visible = false;
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 

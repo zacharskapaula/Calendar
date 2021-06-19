@@ -15,12 +15,12 @@ namespace Calendar
             {
                 new Event { Title = "First short", Description = "First note description for test purposes", Date = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1)},
                 new Event { Title = "Second long text title test", Description = "dlfsdajfslkdfjsdklfjlkdsfjklsdkljfsdjflksdjk", Date = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 15)},
-                new Event { Title = "Third", Description = "Regular descirption", Date = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1)}
+                new Event { Title = "Third", Description = "Regular descirption", Date = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 20)}
             };
         }
         public List<Event> GetEventsByMonth(DateTime dateEvent)
         {
-            return _calendarEvents;
+            return _calendarEvents.Where(ev => ev.Date.Year == dateEvent.Year && ev.Date.Month == dateEvent.Month).ToList();
         }
         public void GetSettings()
         {
