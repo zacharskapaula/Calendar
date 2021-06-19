@@ -41,11 +41,13 @@ namespace Calendar
 
             for (int i = startIndex - 1; i >= 0; --i)
             {
+                _days[i].Clear();
                 _days[i].Date = firstOfMonth.AddDays(i - startIndex);
             }
 
             for (int i = startIndex; i < _days.Count; ++i)
             {
+                _days[i].Clear();
                 _days[i].Date = firstOfMonth.AddDays(adddaystoControl++);
                 _days[i].DayEvents = _calendarData.GetEventsByMonth(_currentDate)
                     .Where(dayEvent => dayEvent.Date.Date == _days[i].Date.Date).ToList();
@@ -83,6 +85,7 @@ namespace Calendar
                 _days.Add(day);
                 caledarNet.Controls.Add(day, column, row);
                 day.DayClicked += OnDayClicked;
+                day.DoubleClick += OnDayDoubleClicked;
                 column += 1;
                 if (column >= 7)
                 {
@@ -104,6 +107,27 @@ namespace Calendar
             }
             listBoxDayEvents.DataSource = selectedDay.DayEvents;
         }
+        private void OnDayDoubleClicked(object sender, EventArgs e)
+        {
+            DayControl selectedDay = sender as DayControl;
+            if (selectedDay == null)
+            {
+                return;
+            }
+
+            using (var eventCreationDialog = new EventCreationDialog(selectedDay.Date))
+            {
+                if (eventCreationDialog.ShowDialog(this) == DialogResult.OK)
+                {
+                    var dayEvents = selectedDay.DayEvents;
+                    dayEvents.Add(eventCreationDialog.CreatedEvent);
+                    selectedDay.DayEvents = dayEvents;
+                    listBoxDayEvents.DataSource = null;
+                    listBoxDayEvents.DataSource = selectedDay.DayEvents;
+                    _calendarData.CreateEvent(eventCreationDialog.CreatedEvent);
+                }
+            }
+        }
 
         private void nextButton_Click(object sender, EventArgs e)
         {
@@ -115,7 +139,7 @@ namespace Calendar
             PreviousMonth();
         }
 
-
+       
 
         private void dayControl1_Load(object sender, EventArgs e)
         {

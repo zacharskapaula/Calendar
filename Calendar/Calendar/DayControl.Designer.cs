@@ -33,26 +33,39 @@ namespace Calendar
         /// </summary>
         private void InitializeComponent()
         {
-            this.dayUserControl = new System.Windows.Forms.Label();
+            this.lblDayOfMonth = new System.Windows.Forms.Label();
+            this.lblEventMarker = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // dayUserControl
+            // lblDayOfMonth
             // 
-            this.dayUserControl.AutoSize = true;
-            this.dayUserControl.Location = new System.Drawing.Point(45, 15);
-            this.dayUserControl.Name = "dayUserControl";
-            this.dayUserControl.Size = new System.Drawing.Size(29, 15);
-            this.dayUserControl.TabIndex = 1;
-            this.dayUserControl.Text = "DAY";
-            this.dayUserControl.Click += new System.EventHandler(this.label2_Click);
+            this.lblDayOfMonth.AutoSize = true;
+            this.lblDayOfMonth.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDayOfMonth.Location = new System.Drawing.Point(22, 29);
+            this.lblDayOfMonth.Name = "lblDayOfMonth";
+            this.lblDayOfMonth.Size = new System.Drawing.Size(47, 25);
+            this.lblDayOfMonth.TabIndex = 1;
+            this.lblDayOfMonth.Text = "DAY";
+            this.lblDayOfMonth.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // lblEventMarker
+            // 
+            this.lblEventMarker.AutoSize = true;
+            this.lblEventMarker.ForeColor = System.Drawing.Color.Red;
+            this.lblEventMarker.Location = new System.Drawing.Point(27, 54);
+            this.lblEventMarker.Name = "lblEventMarker";
+            this.lblEventMarker.Size = new System.Drawing.Size(42, 15);
+            this.lblEventMarker.TabIndex = 2;
+            this.lblEventMarker.Text = "_______";
             // 
             // DayControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dayUserControl);
+            this.Controls.Add(this.lblEventMarker);
+            this.Controls.Add(this.lblDayOfMonth);
             this.Name = "DayControl";
-            this.Size = new System.Drawing.Size(104, 100);
+            this.Size = new System.Drawing.Size(97, 91);
             this.Load += new System.EventHandler(this.DayControl_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DayControl_MouseClick);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DayControl_MouseDown);
@@ -62,6 +75,7 @@ namespace Calendar
         }
 
         #endregion
-        private System.Windows.Forms.Label dayUserControl;
+        private System.Windows.Forms.Label lblDayOfMonth;
+        private System.Windows.Forms.Label lblEventMarker;
     }
 }

@@ -16,7 +16,6 @@ namespace Calendar
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarForm));
             this.caledarNet = new System.Windows.Forms.TableLayoutPanel();
-            this.eventLabel = new System.Windows.Forms.Label();
             this.mondayLabel = new System.Windows.Forms.Label();
             this.tuesdayLabel = new System.Windows.Forms.Label();
             this.wednesdayLabel = new System.Windows.Forms.Label();
@@ -42,32 +41,24 @@ namespace Calendar
             this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28594F));
             this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28594F));
             this.caledarNet.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28594F));
-            this.caledarNet.Location = new System.Drawing.Point(87, 114);
+            this.caledarNet.Location = new System.Drawing.Point(121, 114);
             this.caledarNet.Name = "caledarNet";
-            this.caledarNet.RowCount = 5;
-            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.94863F));
-            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.20548F));
-            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.94863F));
-            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.94863F));
-            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.94863F));
-            this.caledarNet.Size = new System.Drawing.Size(953, 687);
+            this.caledarNet.RowCount = 6;
+            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.03114F));
+            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.55017F));
+            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.10266F));
+            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.34221F));
+            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.96198F));
+            this.caledarNet.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 108F));
+            this.caledarNet.Size = new System.Drawing.Size(878, 665);
             this.caledarNet.TabIndex = 0;
             this.caledarNet.Paint += new System.Windows.Forms.PaintEventHandler(this.caledarNet_Paint);
-            // 
-            // eventLabel
-            // 
-            this.eventLabel.AutoSize = true;
-            this.eventLabel.Location = new System.Drawing.Point(272, 840);
-            this.eventLabel.Name = "eventLabel";
-            this.eventLabel.Size = new System.Drawing.Size(142, 15);
-            this.eventLabel.TabIndex = 3;
-            this.eventLabel.Text = "Add an event or reminder";
             // 
             // mondayLabel
             // 
             this.mondayLabel.AutoSize = true;
             this.mondayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.mondayLabel.Location = new System.Drawing.Point(123, 96);
+            this.mondayLabel.Location = new System.Drawing.Point(152, 96);
             this.mondayLabel.Name = "mondayLabel";
             this.mondayLabel.Size = new System.Drawing.Size(58, 15);
             this.mondayLabel.TabIndex = 4;
@@ -77,7 +68,7 @@ namespace Calendar
             // 
             this.tuesdayLabel.AutoSize = true;
             this.tuesdayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.tuesdayLabel.Location = new System.Drawing.Point(272, 96);
+            this.tuesdayLabel.Location = new System.Drawing.Point(287, 96);
             this.tuesdayLabel.Name = "tuesdayLabel";
             this.tuesdayLabel.Size = new System.Drawing.Size(55, 15);
             this.tuesdayLabel.TabIndex = 5;
@@ -107,7 +98,7 @@ namespace Calendar
             // 
             this.fridayLabel.AutoSize = true;
             this.fridayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.fridayLabel.Location = new System.Drawing.Point(681, 96);
+            this.fridayLabel.Location = new System.Drawing.Point(659, 96);
             this.fridayLabel.Name = "fridayLabel";
             this.fridayLabel.Size = new System.Drawing.Size(45, 15);
             this.fridayLabel.TabIndex = 8;
@@ -117,7 +108,7 @@ namespace Calendar
             // 
             this.saturdayLabel.AutoSize = true;
             this.saturdayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.saturdayLabel.Location = new System.Drawing.Point(804, 96);
+            this.saturdayLabel.Location = new System.Drawing.Point(775, 96);
             this.saturdayLabel.Name = "saturdayLabel";
             this.saturdayLabel.Size = new System.Drawing.Size(63, 15);
             this.saturdayLabel.TabIndex = 9;
@@ -127,7 +118,7 @@ namespace Calendar
             // 
             this.sundayLabel.AutoSize = true;
             this.sundayLabel.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.sundayLabel.Location = new System.Drawing.Point(947, 96);
+            this.sundayLabel.Location = new System.Drawing.Point(915, 96);
             this.sundayLabel.Name = "sundayLabel";
             this.sundayLabel.Size = new System.Drawing.Size(52, 15);
             this.sundayLabel.TabIndex = 10;
@@ -135,7 +126,7 @@ namespace Calendar
             // 
             // previousButton
             // 
-            this.previousButton.Location = new System.Drawing.Point(87, 29);
+            this.previousButton.Location = new System.Drawing.Point(121, 29);
             this.previousButton.Name = "previousButton";
             this.previousButton.Size = new System.Drawing.Size(99, 24);
             this.previousButton.TabIndex = 11;
@@ -145,7 +136,7 @@ namespace Calendar
             // 
             // nextButton
             // 
-            this.nextButton.Location = new System.Drawing.Point(941, 29);
+            this.nextButton.Location = new System.Drawing.Point(900, 24);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(99, 24);
             this.nextButton.TabIndex = 12;
@@ -167,14 +158,14 @@ namespace Calendar
             // 
             this.listBoxDayEvents.FormattingEnabled = true;
             this.listBoxDayEvents.ItemHeight = 15;
-            this.listBoxDayEvents.Location = new System.Drawing.Point(458, 840);
+            this.listBoxDayEvents.Location = new System.Drawing.Point(368, 796);
             this.listBoxDayEvents.Name = "listBoxDayEvents";
-            this.listBoxDayEvents.Size = new System.Drawing.Size(291, 49);
+            this.listBoxDayEvents.Size = new System.Drawing.Size(383, 94);
             this.listBoxDayEvents.TabIndex = 14;
             // 
             // CalendarForm
             // 
-            this.ClientSize = new System.Drawing.Size(1120, 962);
+            this.ClientSize = new System.Drawing.Size(1212, 927);
             this.Controls.Add(this.listBoxDayEvents);
             this.Controls.Add(this.monthLabel);
             this.Controls.Add(this.nextButton);
@@ -186,7 +177,6 @@ namespace Calendar
             this.Controls.Add(this.wednesdayLabel);
             this.Controls.Add(this.tuesdayLabel);
             this.Controls.Add(this.mondayLabel);
-            this.Controls.Add(this.eventLabel);
             this.Controls.Add(this.caledarNet);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CalendarForm";
@@ -211,7 +201,6 @@ namespace Calendar
 
         //private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TableLayoutPanel caledarNet;
-        private System.Windows.Forms.Label eventLabel;
         private System.Windows.Forms.Label mondayLabel;
         private System.Windows.Forms.Label tuesdayLabel;
         private System.Windows.Forms.Label wednesdayLabel;
