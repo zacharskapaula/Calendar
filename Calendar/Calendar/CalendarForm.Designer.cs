@@ -16,8 +16,6 @@ namespace Calendar
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarForm));
             this.caledarNet = new System.Windows.Forms.TableLayoutPanel();
-            this.commitButton = new System.Windows.Forms.Button();
-            this.eventTextBox = new System.Windows.Forms.TextBox();
             this.eventLabel = new System.Windows.Forms.Label();
             this.mondayLabel = new System.Windows.Forms.Label();
             this.tuesdayLabel = new System.Windows.Forms.Label();
@@ -29,6 +27,7 @@ namespace Calendar
             this.previousButton = new System.Windows.Forms.Button();
             this.nextButton = new System.Windows.Forms.Button();
             this.monthLabel = new System.Windows.Forms.Label();
+            this.listBoxDayEvents = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // caledarNet
@@ -55,26 +54,10 @@ namespace Calendar
             this.caledarNet.TabIndex = 0;
             this.caledarNet.Paint += new System.Windows.Forms.PaintEventHandler(this.caledarNet_Paint);
             // 
-            // commitButton
-            // 
-            this.commitButton.Location = new System.Drawing.Point(740, 934);
-            this.commitButton.Name = "commitButton";
-            this.commitButton.Size = new System.Drawing.Size(99, 24);
-            this.commitButton.TabIndex = 1;
-            this.commitButton.Text = "COMMIT";
-            this.commitButton.UseVisualStyleBackColor = true;
-            // 
-            // eventTextBox
-            // 
-            this.eventTextBox.Location = new System.Drawing.Point(330, 934);
-            this.eventTextBox.Name = "eventTextBox";
-            this.eventTextBox.Size = new System.Drawing.Size(382, 23);
-            this.eventTextBox.TabIndex = 2;
-            // 
             // eventLabel
             // 
             this.eventLabel.AutoSize = true;
-            this.eventLabel.Location = new System.Drawing.Point(330, 907);
+            this.eventLabel.Location = new System.Drawing.Point(272, 840);
             this.eventLabel.Name = "eventLabel";
             this.eventLabel.Size = new System.Drawing.Size(142, 15);
             this.eventLabel.TabIndex = 3;
@@ -180,9 +163,19 @@ namespace Calendar
             this.monthLabel.Text = "MONTH";
             this.monthLabel.Click += new System.EventHandler(this.monthLabel_Click);
             // 
+            // listBoxDayEvents
+            // 
+            this.listBoxDayEvents.FormattingEnabled = true;
+            this.listBoxDayEvents.ItemHeight = 15;
+            this.listBoxDayEvents.Location = new System.Drawing.Point(458, 840);
+            this.listBoxDayEvents.Name = "listBoxDayEvents";
+            this.listBoxDayEvents.Size = new System.Drawing.Size(291, 49);
+            this.listBoxDayEvents.TabIndex = 14;
+            // 
             // CalendarForm
             // 
-            this.ClientSize = new System.Drawing.Size(1126, 1061);
+            this.ClientSize = new System.Drawing.Size(1120, 962);
+            this.Controls.Add(this.listBoxDayEvents);
             this.Controls.Add(this.monthLabel);
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.previousButton);
@@ -194,8 +187,6 @@ namespace Calendar
             this.Controls.Add(this.tuesdayLabel);
             this.Controls.Add(this.mondayLabel);
             this.Controls.Add(this.eventLabel);
-            this.Controls.Add(this.eventTextBox);
-            this.Controls.Add(this.commitButton);
             this.Controls.Add(this.caledarNet);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CalendarForm";
@@ -220,9 +211,6 @@ namespace Calendar
 
         //private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TableLayoutPanel caledarNet;
-        
-        private System.Windows.Forms.Button commitButton;
-        private System.Windows.Forms.TextBox eventTextBox;
         private System.Windows.Forms.Label eventLabel;
         private System.Windows.Forms.Label mondayLabel;
         private System.Windows.Forms.Label tuesdayLabel;
@@ -234,6 +222,8 @@ namespace Calendar
         private System.Windows.Forms.Button previousButton;
         private System.Windows.Forms.Button nextButton;
         private System.Windows.Forms.Label monthLabel;
+        private System.Windows.Forms.ListBox listBoxDayEvents;
+       
     }
 }
 
