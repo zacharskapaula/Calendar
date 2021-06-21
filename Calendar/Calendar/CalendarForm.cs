@@ -16,9 +16,7 @@ namespace Calendar
 
     public partial class CalendarForm : Form
     {
-        /// <summary>
-        /// List of 42 days of month control.
-        /// </summary>
+        
         private List<DayControl> _days = new List<DayControl>(42);
         private DateTime _currentDate;
         private ICalendarEventData _calendarData;
@@ -32,7 +30,7 @@ namespace Calendar
             UpdateCurrentMonthText();
         }
         /// <summary>
-        /// The inferface ICalendarEventData creates new class InMemoryCalendarEventData
+        /// The inferface ICalendarEventData creates new object InMemoryCalendarEventData. Returns data provider for the calendar view.
         /// </summary>
         /// <returns></returns>
         public ICalendarEventData GetDataProvider()
@@ -96,7 +94,7 @@ namespace Calendar
         }
 
         /// <summary>
-        /// Creates 42 controls for days of the month, 7 column and 6 rows. 
+        /// Creates days controls for days of the month in column and rows.
         /// </summary>
         public void InitializeDaysControls()
         {
@@ -161,20 +159,12 @@ namespace Calendar
                 }
             }
         }
-        /// <summary>
-        /// The function NextMonth() starts after clicking the nextButton.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+       
         private void nextButton_Click(object sender, EventArgs e)
         {
             NextMonth();
         }
-        /// <summary>
-        /// The function PreviousMonth() starts after clicking the prevoiusButton.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+       
         private void previousButton_Click(object sender, EventArgs e)
         {
             PreviousMonth();
