@@ -147,9 +147,10 @@ namespace Calendar
             // monthLabel
             // 
             this.monthLabel.AutoSize = true;
-            this.monthLabel.Location = new System.Drawing.Point(547, 29);
+            this.monthLabel.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.monthLabel.Location = new System.Drawing.Point(484, 24);
             this.monthLabel.Name = "monthLabel";
-            this.monthLabel.Size = new System.Drawing.Size(51, 15);
+            this.monthLabel.Size = new System.Drawing.Size(114, 37);
             this.monthLabel.TabIndex = 13;
             this.monthLabel.Text = "MONTH";
             this.monthLabel.Click += new System.EventHandler(this.monthLabel_Click);
