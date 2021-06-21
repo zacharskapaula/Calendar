@@ -10,12 +10,15 @@ using System.Data;
 using System.IO;
 using System.Windows;
 
+
 namespace Calendar
 {
 
     public partial class CalendarForm : Form
     {
-
+        /// <summary>
+        /// List of 42 days of month control.
+        /// </summary>
         private List<DayControl> _days = new List<DayControl>(42);
         private DateTime _currentDate;
         private ICalendarEventData _calendarData;
@@ -26,13 +29,20 @@ namespace Calendar
             _calendarData = GetDataProvider();
             InitializeDaysControls();
             UpdateCalendarView();
-            DisplayCurrentMonth();
+            UpdateCurrentMonthText();
         }
-
+        /// <summary>
+        /// The inferface ICalendarEventData creates new class InMemoryCalendarEventData
+        /// </summary>
+        /// <returns></returns>
         public ICalendarEventData GetDataProvider()
         {
             return new InMemoryCalendarEventData();
         }
+
+        /// <summary>
+        /// Designation of the first day of each month and the number of days in the displayed month.
+        /// </summary>
         private void UpdateCalendarView()
         {
             var firstOfMonth = new DateTime(_currentDate.Year, _currentDate.Month, 1);
@@ -53,8 +63,10 @@ namespace Calendar
                     .Where(dayEvent => dayEvent.Date.Date == _days[i].Date.Date).ToList();
             }
         }
-
-        public void DisplayCurrentMonth()
+        /// <summary>
+        /// Updates month and year in monthLabel depending on the currentDate value.
+        /// </summary>
+        public void UpdateCurrentMonthText()
         {
             monthLabel.Text = _currentDate.ToString("MMMM yyyy");
         }
@@ -63,19 +75,29 @@ namespace Calendar
 
         }
 
+        /// <summary>
+        /// Displays next month in calendar view. Sets currentDate to next month and updates the view
+        /// </summary>
         public void NextMonth()
         {
             _currentDate = _currentDate.AddMonths(+1);
             UpdateCalendarView();
-            DisplayCurrentMonth();
+            UpdateCurrentMonthText();
         }
 
+        /// <summary>
+        /// Displays previous month in calendar view. Sets currentDate to previous month and updates the view
+        /// </summary>
         public void PreviousMonth()
         {
             _currentDate = _currentDate.AddMonths(-1);
             UpdateCalendarView();
-            DisplayCurrentMonth();
+            UpdateCurrentMonthText();
         }
+
+        /// <summary>
+        /// Creates 42 controls for days of the month, 7 column and 6 rows. 
+        /// </summary>
         public void InitializeDaysControls()
         {
             int column = 0, row = 0;
@@ -95,6 +117,11 @@ namespace Calendar
 
             }
         }
+        /// <summary>
+        /// After pressing the control with the day of the month, only the last pressed control will light up.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnDayClicked(object sender, EventArgs e)
         {
             DayControl selectedDay = sender as DayControl;
@@ -107,6 +134,12 @@ namespace Calendar
             }
             listBoxDayEvents.DataSource = selectedDay.DayEvents;
         }
+        /// <summary>
+        /// After double-clicking the control with the day of the month, the CreateEvent window is displayed. Saving the event is carried out by the OK button.
+        /// Event is added to the list and displayed on it after clicked on that day.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnDayDoubleClicked(object sender, EventArgs e)
         {
             DayControl selectedDay = sender as DayControl;
@@ -128,12 +161,20 @@ namespace Calendar
                 }
             }
         }
-
+        /// <summary>
+        /// The function NextMonth() starts after clicking the nextButton.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void nextButton_Click(object sender, EventArgs e)
         {
             NextMonth();
         }
-
+        /// <summary>
+        /// The function PreviousMonth() starts after clicking the prevoiusButton.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void previousButton_Click(object sender, EventArgs e)
         {
             PreviousMonth();

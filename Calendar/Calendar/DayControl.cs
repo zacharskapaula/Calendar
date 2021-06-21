@@ -23,7 +23,7 @@ namespace Calendar
                 EventsChanged();
             }
         }
-
+       
         public DayControl()
         {
             InitializeComponent();
@@ -31,7 +31,11 @@ namespace Calendar
             lblDayOfMonth.DoubleClick += (s, e) => OnDoubleClick(e);
         }
 
+      
         public DateTime _date;
+        /// <summary>
+        /// Get the date, then assign the appropriate date and write on the control only the day .
+        /// </summary>
         public DateTime Date
         {
             get => _date;
@@ -41,12 +45,16 @@ namespace Calendar
                 lblDayOfMonth.Text = _date.ToString("dd");
             }
         }
-
+        /// <summary>
+        ///  Control's color change to same as the background color when clicked on another day.
+        /// </summary>
         public void ClearSelection()
         {
             BackColor = Color.ForestGreen;
         }
-
+        /// <summary>
+        /// Update the view of the day when event collection of this day changed. 
+        /// </summary>
         private void EventsChanged()
         {
             lblEventMarker.Visible = _dayEvents?.Count > 0;
@@ -72,6 +80,12 @@ namespace Calendar
             
         }
 
+
+        /// <summary>
+        /// Color change to light blue when day is selected.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DayControl_MouseClick(object sender, MouseEventArgs e)
         {
             BackColor = Color.LightBlue;
