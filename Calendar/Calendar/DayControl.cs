@@ -53,7 +53,7 @@ namespace Calendar
             BackColor = Color.ForestGreen;
         }
         /// <summary>
-        /// Vissible of underline the day with save event.
+        /// Update the view of the day when event collection of this day changed. 
         /// </summary>
         private void EventsChanged()
         {
@@ -82,7 +82,7 @@ namespace Calendar
 
 
         /// <summary>
-        /// Color change to light blue when clicked on the day.
+        /// Color change to light blue when day is selected.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

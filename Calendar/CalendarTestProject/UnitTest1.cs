@@ -14,17 +14,11 @@ namespace CalendarTestProject
         [Test]
         public void Test1()
         {
-            
+            CalendarForm ob = new CalendarForm();
+            bool day = true;
+            day = ob.Visible;
         }
 
-        public void Test2()
-        {
-           
-        }
-
-        public void Test3()
-        {
-
-        }
+        
     }
 }
