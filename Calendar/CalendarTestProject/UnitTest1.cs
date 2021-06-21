@@ -1,6 +1,6 @@
 using NUnit.Framework;
 using Calendar;
-using System;
+
 
 namespace CalendarTestProject
 {
@@ -14,9 +14,7 @@ namespace CalendarTestProject
         [Test]
         public void Test1()
         {
-            CalendarForm ob = new CalendarForm();
-            bool day = true;
-            day = ob.Visible;
+            
         }
 
         
